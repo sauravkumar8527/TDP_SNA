@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+<title>Preskool - Charts</title>
+
+<link rel="shortcut icon" href="assets/img/favicon.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="assets/plugins/feather/feather.css">
+
+<link rel="stylesheet" href="assets/plugins/icons/flags/flags.css">
+
+<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script>
+</head>
+<body>
+
+<div class="main-wrapper">
+
+    <div class="header">
+
+        <div class="header-left">
+            <a href="index.html" class="logo">
+                <img src="assets/img/logo.png" alt="Logo">
+            </a>
+            <a href="index.html" class="logo logo-small">
+                <img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
+            </a>
+        </div>
+        <div class="menu-toggle">
+            <a href="javascript:void(0);" id="toggle_btn">
+                <i class="fas fa-bars"></i>
+            </a>
+        </div>
+
+        <div class="top-nav-search">
+            <form>
+                <input type="text" class="form-control" placeholder="Search here">
+                <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <a class="mobile_btn" id="mobile_btn">
+            <i class="fas fa-bars"></i>
+        </a>
+
+        <ul class="nav user-menu">
+            <li class="nav-item dropdown noti-dropdown language-drop me-2">
+                <a href="#" class="dropdown-toggle nav-link header-nav-list" data-bs-toggle="dropdown">
+                    <img src="assets/img/icons/header-icon-01.svg" alt="">
+                </a>
+                <div class="dropdown-menu ">
+                    <div class="noti-content">
+                        <div>
+                            <a class="dropdown-item" href="javascript:;"><i
+                                    class="flag flag-lr me-2"></i>English</a>
+                            <a class="dropdown-item" href="javascript:;"><i
+                                    class="flag flag-bl me-2"></i>Francais</a>
+                            <a class="dropdown-item" href="javascript:;"><i class="flag flag-cn me-2"></i>Turkce</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown noti-dropdown me-2">
+                <a href="#" class="dropdown-toggle nav-link header-nav-list" data-bs-toggle="dropdown">
+                    <img src="assets/img/icons/header-icon-05.svg" alt="">
+                </a>
+                <div class="dropdown-menu notifications">
+                    <div class="topnav-dropdown-header">
+                        <span class="notification-title">Notifications</span>
+                        <a href="javascript:void(0)" class="clear-noti"> Clear All </a>
+                    </div>
+                    <div class="noti-content">
+                        <ul class="notification-list">
+                            <li class="notification-message">
+                                <a href="#">
+                                    <div class="media d-flex">
+                                        <span class="avatar avatar-sm flex-shrink-0">
+                                            <img class="avatar-img rounded-circle" alt="User Image"
+                                                src="assets/img/profiles/avatar-13.jpg">
+                                        </span>
+                                        <div class="media-body flex-grow-1">
+                                            <p class="noti-details"><span class="noti-title">Mercury Software
+                                                    Inc</span> added a new product <span class="noti-title">Apple
+                                                    MacBook Pro</span></p>
+                                            <p class="noti-time"><span class="notification-time">12 mins ago</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="topnav-dropdown-footer">
+                        <a href="#">View all Notifications</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item zoom-screen me-2">
+                <a href="#" class="nav-link header-nav-list win-maximize">
+                    <img src="assets/img/icons/header-icon-04.svg" alt="">
+                </a>
+            </li>
+
+            <li class="nav-item dropdown has-arrow new-user-menus">
+                <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
+                    <span class="user-img">
+                        <img class="rounded-circle" src="assets/img/profiles/avatar-01.jpg" width="31"
+                            alt="Soeng Souy">
+                        <div class="user-text">
+                            <h6>Admin 1</h6>
+                            <p class="text-muted mb-0">Administrator</p>
+                        </div>
+                    </span>
+                </a>
+                <div class="dropdown-menu">
+                    <div class="user-header">
+                        <div class="avatar avatar-sm">
+                            <img src="assets/img/profiles/avatar-01.jpg" alt="User Image"
+                                class="avatar-img rounded-circle">
+                        </div>
+                        <div class="user-text">
+                            <h6>Admin 1</h6>
+                            <p class="text-muted mb-0">Administrator</p>
+                        </div>
+                    </div>
+                    <a class="dropdown-item" >My Profile</a>
+                    <a class="dropdown-item" >Inbox</a>
+                    <a class="dropdown-item" href="login.html">Logout</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+<div class="sidebar" id="sidebar">
+<div class="sidebar-inner slimscroll">
+<div id="sidebar-menu" class="sidebar-menu">
+<ul>
+<li class="menu-title">
+<span>Main Menu</span>
+</li>
+<li class="submenu">
+<a href="#"><i class="feather-grid"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
+<ul>
+<li><a href="index.html">Admin Dashboard</a></li>
+<li><a href="#">Teacher Dashboard</a></li>
+<li><a href="student-dashboard.html">Student Dashboard</a></li>
+</ul>
+</li>
+
+<li class="menu-title">
+<span>Data Analysis</span>
+</li>
+
+<li class="submenu active">
+<a href="#"><i data-feather="bar-chart-2"></i> <span> Charts </span> <span class="menu-arrow"></span></a>
+<ul>
+<li><a href="chart-apex.html">Survey Charts</a></li>
+<li><a href="chart-js.html" class="active">ECharts (SNA)</a></li>
+</ul>
+</li>
+<li class="submenu">
+    <a href="#"><i class="fas fa-columns"></i> <span> Forms </span> <span class="menu-arrow"></span></a>
+    <ul>
+    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScmCVQdFyoctsKQbLYsLwJCg6rYJqxH3tScHO3nWRXR-RL7SA/viewform">General Survey </a></li>
+    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe1M1JU4NeH10jnIsE4fUulFoT_PuHZPWV8gn4LVzLM0IUEEg/viewform">SNA Survey</a></li>
+    <li><a href="https://94t1qb4j9r9.typeform.com/to/zRdVBdiK">Ethics Poll </a></li>
+    </ul>
+</li>
+<li class="submenu">
+<a href="#"><i class="fas fa-table"></i> <span> Tables </span> <span class="menu-arrow"></span></a>
+<ul>
+<li><a href="data-tables.html">Data Table </a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div class="page-wrapper">
+<div class="content container-fluid">
+
+<div class="page-header">
+<div class="row">
+<div class="col">
+<h3 class="page-title">ECharts (Social Network Analysis)</h3>
+<ul class="breadcrumb">
+<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+<li class="breadcrumb-item active">Components</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="row"></div>
+
+
+
+  <div class="col-md-6">
+    <div class="card">
+    <div class="card-header">
+    <div class="card-title">Whom do you Disklike</div>
+    </div>
+    <div class="card-body">
+    <div>
+      <div id="chart-container-2" style="width: 500px; height: 400px;" class="h-300"></div>
+
+      <script>
+        var chart = echarts.init(document.getElementById('chart-container-2'));
+        chart.showLoading();
+    
+        var data = {
+          nodes: [
+            {
+              id: 's1',
+              name: 'Sam',
+              symbolSize: 19.12381,
+              x: -266.82776,
+              y: 299.6904,
+              value: 28.685715,
+              category: 0
+            },
+            {
+              id: 's2',
+              name: 'Suraj',
+              symbolSize: 2.6666666666666665,
+              x: -418.08344,
+              y: 446.8853,
+              value: 4,
+              category: 0
+            },
+            {
+              id: 's3',
+              name: 'Kaul',
+              symbolSize: 6.323809333333333,
+              x: -212.76357,
+              y: 245.29176,
+              value: 9.485714,
+              category: 1
+            },
+            {
+              id: 's4',
+              name: 'Charles',
+              symbolSize: 6.323809333333333,
+              x: -242.82404,
+              y: 235.26283,
+              value: 9.485714,
+              category: 1
+            },
+            {
+              id: 's5',
+              name: 'Bashi',
+              symbolSize: 2.6666666666666665,
+              x: -379.30386,
+              y: 429.06424,
+              value: 4,
+              category: 0
+            },
+            {
+              id: 's6',
+              name: 'Saurav',
+              symbolSize: 2.6666666666666665,
+              x: -417.26337,
+              y: 406.03506,
+              value: 4,
+              category: 0
+            },
+            {
+              id: 's7',
+              name: 'Bridget',
+              symbolSize: 2.6666666666666665,
+              x: -332.6012,
+              y: 485.16974,
+              value: 4,
+              category: 0
+            },
+            {
+              id: 's8',
+              name: 'Somnath',
+              symbolSize: 2.6666666666666665,
+              x: -382.69568,
+              y: 475.09113,
+              value: 4,
+              category: 0
+            },
+            {
+                id: 's9',
+      name: 'Aditya',
+      symbolSize: 2.6666666666666665,
+      x: -333.31332,
+      y: 444.71451,
+      value: 4,
+      category: 0
+            },
+            {
+              id: 's10',
+              name: 'Alex',
+              symbolSize: 2.6666666666666665,
+              x:  -372.31332,
+              y: 452.71451,
+              value: 4,
+              category: 0
+            },
+            {
+              id: 's11',
+              name: 'Dollar',
+              symbolSize: 2.6666666666666665,
+              x:  -305.10361,
+              y: 472.05503,
+              value: 4,
+              category: 0
+            }, 
+            {
+              id: 's12',
+              name: 'Bec',
+              symbolSize: 2.6666666666666665,
+              x:  -412.68917,
+              y:415.83069,
+              value: 4,
+              category: 0
+            }, 
+            {
+              id: 's13',
+              name: 'Yuki',
+              symbolSize: 2.6666666666666665,
+              x:  -366.16562,
+              y:480.35803,
+              value: 4,
+              category: 0
+            }, 
+            {
+              id: 's14',
+              name: 'Camilia',
+              symbolSize: 2.6666666666666665,
+              x: -391.13232,
+              y:472.80003,
+              value: 4,
+              category: 0
+            }, 
+    
+          ],
+          links: [
+          {source: "s1", target: "s6"},
+        {source: "s1", target: "s5"},
+        {source: "s1", target: "s2"},
+        
+        {source: "s2", target: "s5"},
+        {source: "s2", target: "s1"},
+        {source: "s2", target: "s13"},
+        
+        {source: "s3", target: "s5"},
+        {source: "s3", target: "s7"},
+        {source: "s3", target: "s2"},
+       
+       
+        {source: "s4", target: "s7"},
+        {source: "s4", target: "s2"},
+        {source: "s4", target: "s13"},
+    
+    
+        {source: "s5", target: "s7"},
+        {source: "s5", target: "s8"},
+        {source: "s5", target: "s2"},
+       
+        {source: "s6", target: "s3"},
+        {source: "s6", target: "s5"},
+        {source: "s6", target: "s13"},
+      
+        {source: "s7", target: "s8"},
+        {source: "s7", target: "s12"},
+        {source: "s7", target: "s2"},
+    
+        {source: "s8", target: "s9"},
+        {source: "s8", target: "s13"},
+        {source: "s8", target: "s3"},
+       
+        {source: "s9", target: "s14"},
+        {source: "s9", target: "s12"},
+        {source: "s9", target: "s1"},
+      
+        {source: "s10", target: "s14"},
+        {source: "s10", target: "s8"},
+        {source: "s10", target: "s11"},
+    
+        {source: "s11", target: "s9"},
+        {source: "s11", target: "s4"},
+        {source: "s11", target: "s14"},
+    
+        {source: "s12", target: "s2"},
+        {source: "s12", target: "s5"},
+        {source: "s12", target: "s11"},
+    
+        {source: "s13", target: "s12"},
+        {source: "s13", target: "s2"},
+        {source: "s13", target: "s14"},
+    
+        {source: "s14", target: "s4"},
+        {source: "s14", target: "s5"},
+        {source: "s14", target: "s6"},
+        
+    
+    
+    
+          ],
+          categories: [
+            { name: 'Category 0' },
+            { name: 'Category 1' }
+          ]
+        };
+    
+        data.nodes.forEach(function (node) {
+          node.label = {
+            show: node.symbolSize > 30
+          };
+        });
+    
+        var option = {
+          title: {
+            text: 'Question 8',
+            subtext: 'Default layout',
+            top: 'bottom',
+            left: 'right'
+          },
+          tooltip: {},
+          legend: [
+            {
+              data: data.categories.map(function (a) {
+                return a.name;
+              })
+            }
+          ],
+          animationDuration: 1500,
+          animationEasingUpdate: 'quinticInOut',
+          series: [
+            {
+              name: 'Question 8',
+              type: 'graph',
+              layout: 'none',
+              data: data.nodes,
+              links: data.links,
+              categories: data.categories,
+              roam: true,
+              label: {
+                position: 'right',
+                formatter: '{b}'
+              },
+              lineStyle: {
+                color: 'source',
+                curveness: 0.3
+              },
+              emphasis: {
+                focus: 'adjacency',
+                lineStyle: {
+                  width: 10
+                }
+              }
+            }
+          ]
+        };
+    
+        chart.hideLoading();
+        chart.setOption(option);
+      </script>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card">
+      <div class="card-header">
+      <div class="card-title">Who can you go for advice</div>
+      </div>
+      <div class="card-body">
+      <div>
+        <div id="chart-container-3" style="width: 500px; height: 400px;"></div>
+
+        <script>
+          var chart = echarts.init(document.getElementById('chart-container-3'));
+          chart.showLoading();
+      
+          var data = {
+            nodes: [
+              {
+                id: 's1',
+                name: 'Sam',
+                symbolSize: 19.12381,
+                x: -266.82776,
+                y: 299.6904,
+                value: 28.685715,
+                category: 0
+              },
+              {
+                id: 's2',
+                name: 'Suraj',
+                symbolSize: 2.6666666666666665,
+                x: -418.08344,
+                y: 446.8853,
+                value: 4,
+                category: 0
+              },
+              {
+                id: 's3',
+                name: 'Kaul',
+                symbolSize: 6.323809333333333,
+                x: -212.76357,
+                y: 245.29176,
+                value: 9.485714,
+                category: 1
+              },
+              {
+                id: 's4',
+                name: 'Charles',
+                symbolSize: 6.323809333333333,
+                x: -242.82404,
+                y: 235.26283,
+                value: 9.485714,
+                category: 1
+              },
+              {
+                id: 's5',
+                name: 'Bashi',
+                symbolSize: 2.6666666666666665,
+                x: -379.30386,
+                y: 429.06424,
+                value: 4,
+                category: 0
+              },
+              {
+                id: 's6',
+                name: 'Saurav',
+                symbolSize: 2.6666666666666665,
+                x: -417.26337,
+                y: 406.03506,
+                value: 4,
+                category: 0
+              },
+              {
+                id: 's7',
+                name: 'Bridget',
+                symbolSize: 2.6666666666666665,
+                x: -332.6012,
+                y: 485.16974,
+                value: 4,
+                category: 0
+              },
+              {
+                id: 's8',
+                name: 'Somnath',
+                symbolSize: 2.6666666666666665,
+                x: -382.69568,
+                y: 475.09113,
+                value: 4,
+                category: 0
+              },
+              {
+                  id: 's9',
+        name: 'Aditya',
+        symbolSize: 2.6666666666666665,
+        x: -333.31332,
+        y: 444.71451,
+        value: 4,
+        category: 0
+              },
+              {
+                id: 's10',
+                name: 'Alex',
+                symbolSize: 2.6666666666666665,
+                x:  -372.31332,
+                y: 452.71451,
+                value: 4,
+                category: 0
+              },
+              {
+                id: 's11',
+                name: 'Dollar',
+                symbolSize: 2.6666666666666665,
+                x:  -305.10361,
+                y: 472.05503,
+                value: 4,
+                category: 0
+              }, 
+              {
+                id: 's12',
+                name: 'Bec',
+                symbolSize: 2.6666666666666665,
+                x:  -412.68917,
+                y:415.83069,
+                value: 4,
+                category: 0
+              }, 
+              {
+                id: 's13',
+                name: 'Yuki',
+                symbolSize: 2.6666666666666665,
+                x:  -366.16562,
+                y:480.35803,
+                value: 4,
+                category: 0
+              }, 
+              {
+                id: 's14',
+                name: 'Camilia',
+                symbolSize: 2.6666666666666665,
+                x: -391.13232,
+                y:472.80003,
+                value: 4,
+                category: 0
+              }, 
+      
+            ],
+            links: [
+            {source: "s1", target: "s13"},
+          {source: "s1", target: "s12"},
+          {source: "s1", target: "s10"},
+          
+          {source: "s2", target: "s14"},
+          {source: "s2", target: "s6"},
+          {source: "s2", target: "s12"},
+          
+          {source: "s3", target: "s9"},
+          {source: "s3", target: "s8"},
+          {source: "s3", target: "s11"},
+         
+          {source: "s4", target: "s9"},
+          {source: "s4", target: "s12"},
+          {source: "s4", target: "s10"},
+      
+          {source: "s5", target: "s13"},
+          {source: "s5", target: "s9"},
+          {source: "s5", target: "s11"},
+         
+          {source: "s6", target: "s7"},
+          {source: "s6", target: "s14"},
+          {source: "s6", target: "s9"},
+        
+          {source: "s7", target: "s13"},
+          {source: "s7", target: "s14"},
+          {source: "s7", target: "s11"},
+      
+          {source: "s8", target: "s13"},
+          {source: "s8", target: "s1"},
+          {source: "s8", target: "s2"},
+         
+          {source: "s9", target: "s4"},
+          {source: "s9", target: "s7"},
+          {source: "s9", target: "s10"},
+        
+          {source: "s10", target: "s5"},
+          {source: "s10", target: "s9"},
+          {source: "s10", target: "s12"},
+      
+          {source: "s11", target: "s10"},
+          {source: "s11", target: "s5"},
+          {source: "s11", target: "s12"},
+      
+          {source: "s12", target: "s8"},
+          {source: "s12", target: "s7"},
+          {source: "s12", target: "s10"},
+      
+          {source: "s13", target: "s8"},
+          {source: "s13", target: "s7"},
+          {source: "s13", target: "s9"},
+      
+          {source: "s14", target: "s7"},
+          {source: "s14", target: "s8"},
+          {source: "s14", target: "s9"},
+          
+      
+      
+      
+            ],
+            categories: [
+              { name: 'Category 0' },
+              { name: 'Category 1' }
+            ]
+          };
+      
+          data.nodes.forEach(function (node) {
+            node.label = {
+              show: node.symbolSize > 30
+            };
+          });
+      
+          var option = {
+            title: {
+              text: 'Question 9',
+              subtext: 'Default layout',
+              top: 'bottom',
+              left: 'right'
+            },
+            tooltip: {},
+            legend: [
+              {
+                data: data.categories.map(function (a) {
+                  return a.name;
+                })
+              }
+            ],
+            animationDuration: 1500,
+            animationEasingUpdate: 'quinticInOut',
+            series: [
+              {
+                name: 'Question 8',
+                type: 'graph',
+                layout: 'none',
+                data: data.nodes,
+                links: data.links,
+                categories: data.categories,
+                roam: true,
+                label: {
+                  position: 'right',
+                  formatter: '{b}'
+                },
+                lineStyle: {
+                  color: 'source',
+                  curveness: 0.3
+                },
+                emphasis: {
+                  focus: 'adjacency',
+                  lineStyle: {
+                    width: 10
+                  }
+                }
+              }
+            ]
+          };
+      
+          chart.hideLoading();
+          chart.setOption(option);
+        </script>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card">
+        <div class="card-header">
+        <div class="card-title">Who is the most popular student</div>
+        </div>
+        <div class="card-body">
+        <div>
+          <div id="chart-container-4" style="width: 500px; height: 400px;"></div>
+          <script>
+            var chart = echarts.init(document.getElementById('chart-container-4'));
+            chart.showLoading();
+        
+            var data = {
+              nodes: [
+                {
+                  id: 's1',
+                  name: 'Sam',
+                  symbolSize: 19.12381,
+                  x: -266.82776,
+                  y: 299.6904,
+                  value: 28.685715,
+                  category: 0
+                },
+                {
+                  id: 's2',
+                  name: 'Suraj',
+                  symbolSize: 2.6666666666666665,
+                  x: -418.08344,
+                  y: 446.8853,
+                  value: 4,
+                  category: 0
+                },
+                {
+                  id: 's3',
+                  name: 'Kaul',
+                  symbolSize: 6.323809333333333,
+                  x: -212.76357,
+                  y: 245.29176,
+                  value: 9.485714,
+                  category: 1
+                },
+                {
+                  id: 's4',
+                  name: 'Charles',
+                  symbolSize: 6.323809333333333,
+                  x: -242.82404,
+                  y: 235.26283,
+                  value: 9.485714,
+                  category: 1
+                },
+                {
+                  id: 's5',
+                  name: 'Bashi',
+                  symbolSize: 2.6666666666666665,
+                  x: -379.30386,
+                  y: 429.06424,
+                  value: 4,
+                  category: 0
+                },
+                {
+                  id: 's6',
+                  name: 'Saurav',
+                  symbolSize: 2.6666666666666665,
+                  x: -417.26337,
+                  y: 406.03506,
+                  value: 4,
+                  category: 0
+                },
+                {
+                  id: 's7',
+                  name: 'Bridget',
+                  symbolSize: 2.6666666666666665,
+                  x: -332.6012,
+                  y: 485.16974,
+                  value: 4,
+                  category: 0
+                },
+                {
+                  id: 's8',
+                  name: 'Somnath',
+                  symbolSize: 2.6666666666666665,
+                  x: -382.69568,
+                  y: 475.09113,
+                  value: 4,
+                  category: 0
+                },
+                {
+                    id: 's9',
+          name: 'Aditya',
+          symbolSize: 2.6666666666666665,
+          x: -333.31332,
+          y: 444.71451,
+          value: 4,
+          category: 0
+                },
+                {
+                  id: 's10',
+                  name: 'Alex',
+                  symbolSize: 2.6666666666666665,
+                  x:  -372.31332,
+                  y: 452.71451,
+                  value: 4,
+                  category: 0
+                },
+                {
+                  id: 's11',
+                  name: 'Dollar',
+                  symbolSize: 2.6666666666666665,
+                  x:  -305.10361,
+                  y: 472.05503,
+                  value: 4,
+                  category: 0
+                }, 
+                {
+                  id: 's12',
+                  name: 'Bec',
+                  symbolSize: 2.6666666666666665,
+                  x:  -412.68917,
+                  y:415.83069,
+                  value: 4,
+                  category: 0
+                }, 
+                {
+                  id: 's13',
+                  name: 'Yuki',
+                  symbolSize: 2.6666666666666665,
+                  x:  -366.16562,
+                  y:480.35803,
+                  value: 4,
+                  category: 0
+                }, 
+                {
+                  id: 's14',
+                  name: 'Camilia',
+                  symbolSize: 2.6666666666666665,
+                  x: -391.13232,
+                  y:472.80003,
+                  value: 4,
+                  category: 0
+                }, 
+        
+              ],
+              links: [
+              {source: "s1", target: "s9"},
+            {source: "s1", target: "s11"},
+            {source: "s1", target: "s7"},
+           
+            {source: "s2", target: "s9"},
+            {source: "s2", target: "s11"},
+            {source: "s2", target: "s3"},
+            
+            {source: "s3", target: "s10"},
+            {source: "s3", target: "s12"},
+            {source: "s3", target: "s14"},
+           
+            {source: "s4", target: "s14"},
+            {source: "s4", target: "s2"},
+            {source: "s4", target: "s1"},
+        
+            {source: "s5", target: "s4"},
+            {source: "s5", target: "s12"},
+            {source: "s5", target: "s14"},
+           
+            {source: "s6", target: "s8"},
+            {source: "s6", target: "s10"},
+            {source: "s6", target: "s12"},
+          
+            {source: "s7", target: "s11"},
+            {source: "s7", target: "s9"},
+            {source: "s7", target: "s5"},
+        
+            {source: "s8", target: "s4"},
+            {source: "s8", target: "s10"},
+            {source: "s8", target: "s14"},
+        
+            {source: "s9", target: "s8"},
+            {source: "s9", target: "s11"},
+            {source: "s9", target: "s6"},
+           
+            {source: "s10", target: "s2"},
+            {source: "s10", target: "s3"},
+            {source: "s10", target: "s13"},
+        
+            {source: "s11", target: "s6"},
+            {source: "s11", target: "s1"},
+            {source: "s11", target: "s3"},
+        
+            {source: "s12", target: "s6"},
+            {source: "s12", target: "s4"},
+            {source: "s12", target: "s13"},
+        
+            {source: "s13", target: "s13"},
+            {source: "s13", target: "s11"},
+            {source: "s13", target: "s10"},
+        
+            {source: "s14", target: "s13"},
+            {source: "s14", target: "s11"},
+            {source: "s14", target: "s10"},
+            
+        
+        
+        
+              ],
+              categories: [
+                { name: 'Category 0' },
+                { name: 'Category 1' }
+              ]
+            };
+        
+            data.nodes.forEach(function (node) {
+              node.label = {
+                show: node.symbolSize > 30
+              };
+            });
+        
+            var option = {
+              title: {
+                text: 'Question 10',
+                subtext: 'Default layout',
+                top: 'bottom',
+                left: 'right'
+              },
+              tooltip: {},
+              legend: [
+                {
+                  data: data.categories.map(function (a) {
+                    return a.name;
+                  })
+                }
+              ],
+              animationDuration: 1500,
+              animationEasingUpdate: 'quinticInOut',
+              series: [
+                {
+                  name: 'Question 8',
+                  type: 'graph',
+                  layout: 'none',
+                  data: data.nodes,
+                  links: data.links,
+                  categories: data.categories,
+                  roam: true,
+                  label: {
+                    position: 'right',
+                    formatter: '{b}'
+                  },
+                  lineStyle: {
+                    color: 'source',
+                    curveness: 0.3
+                  },
+                  emphasis: {
+                    focus: 'adjacency',
+                    lineStyle: {
+                      width: 10
+                    }
+                  }
+                }
+              ]
+            };
+        
+            chart.hideLoading();
+            chart.setOption(option);
+          </script>
+        </div>
+        </div>
+        </div>
+        </div>
+
+
+</div>
+</div>
+
+<footer>
+  <p>COPYRIGHT © 2023 TECHNICAL DESIGN PROJECT.</p>
+  </footer>
+
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+
+<script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/js/feather.min.js"></script>
+
+<script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<script src="assets/plugins/chartjs/chart.min.js"></script>
+<script src="assets/plugins/chartjs/chart-data.js"></script>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
